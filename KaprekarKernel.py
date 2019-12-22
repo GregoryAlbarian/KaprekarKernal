@@ -48,4 +48,4 @@ print(all_numbers[0],"-",all_numbers[1],"=",all_numbers[2])
 while all_numbers[2]!=6174:
 	all_numbers=kaprekar_operation(all_numbers[2])
 	print(all_numbers[0],"-",all_numbers[1],"=",all_numbers[2])
-print("finished! You have reached 6174, the four-digit Kaprekar Kernal")
+print("finished! You have reached 6174, the four-digit Kaprekar Kernel")
