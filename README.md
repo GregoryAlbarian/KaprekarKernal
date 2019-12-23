@@ -15,7 +15,7 @@ _Go to the place where you would like to store your program_
 _Then type:_  
 
 > cd KaprekarKernel  
-
 > python3 KaprekarKernel.py  
+
 _just to emphasize this program has no command line arguments to deal with_  
 _you should then be prompted to give a number proper for calculations_
