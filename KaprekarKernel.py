@@ -1,5 +1,6 @@
-# this function return -1 if it possible_number is not a real number
-# this function works!
+# this function return True if it an acceptable number and False otherwise
+# An Acceptable string is 4 characters long, an actual number, not all
+# the number are the same, and is positive
 
 
 def input_validation(number):
@@ -8,6 +9,8 @@ def input_validation(number):
         return False
     elif not number.isdigit():
         return False
+    elif number.count(number[0]) == 4:
+        return False
     else:
         return True
 
@@ -15,8 +18,6 @@ def input_validation(number):
 # this function take the string digit_list and breaks it
 # into a list of 4 if there is not that many characters
 # in the string then it will add 0's
-
-
 def break_into_list(digit_list):
     digit_list = list(str(digit_list))
     length = len(digit_list)
@@ -28,8 +29,6 @@ def break_into_list(digit_list):
 
 # assign place values to list digit_list to be able
 # to convert to an int
-
-
 def assign_place_values(digit_list):
     full_number = 0
     for i in range(0, len(digit_list)):
@@ -39,6 +38,8 @@ def assign_place_values(digit_list):
     return full_number
 
 
+# A Kaprekar Operation is the difference of all the digits in a
+# a number being sorted greatest to least and sorted least to greatest
 def kaprekar_operation(digits):
     # make it work for the just in case 999< to 0999)
     digits = break_into_list(digits)
@@ -52,7 +53,6 @@ def kaprekar_operation(digits):
 
 
 # main program starts here
-
 def main():
     message = "Give a four digit, positive number "
     message += "in which not all the digits are alike: "
@@ -78,5 +78,7 @@ def main():
         print(all_numbers[0], "-", all_numbers[1], "=", all_numbers[2])
     print("finished! You have reached 6174, the four-digit Kaprekar Kernel")
 
+
+# calls main
 if __name__ == '__main__':
     main()
