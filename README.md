@@ -16,4 +16,4 @@ _Then type:_
 > python3 KaprekarKernel.py  
 
 _just to emphasize this program has no command line arguments to deal with_  
-_you should then be prompted to give a number proper for calculations_
+_you should then be prompted to give a proper number for calculations_
