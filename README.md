@@ -5,11 +5,17 @@ This programs take a four digit, positive number where not all digits and comput
 __Startup Instructions (in Linus)__  
 _this program has only been tested in Linus Ubuntu for WSL_  
 _If you need to install python3 still then type:_  
+
 > sudo apt-get install python3  
+
 _Go to the place where you would like to store your program_  
+
 > git clone https://github.com/GregoryAlbarian/KaprekarKernel.git  
+
 _Then type:_  
+
 > cd KaprekarKernel  
+
 > python3 KaprekarKernel.py  
 _just to emphasize this program has no command line arguments to deal with_  
 _you should then be prompted to give a number proper for calculations_
