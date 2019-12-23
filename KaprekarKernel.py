@@ -52,26 +52,31 @@ def kaprekar_operation(digits):
 
 
 # main program starts here
-message = "Give a four digit, positive number "
-message += "in which not all the digits are alike: "
-number = input(message)
 
-while True:
-    try:
-        if input_validation(number):
-            number = int(number)
-            break
-        else:
-            message = "Try again: make sure the number is four digits, "
-            message += "positive, and not all the numbers are the same: "
-            number = input(message)
-    except ValueError:
-        number = input("Try again: give an integer: ")
+def main():
+    message = "Give a four digit, positive number "
+    message += "in which not all the digits are alike: "
+    number = input(message)
 
-all_numbers = kaprekar_operation(number)
-print(all_numbers[0], "-", all_numbers[1], "=", all_numbers[2])
+    while True:
+        try:
+            if input_validation(number):
+                number = int(number)
+                break
+            else:
+                message = "Try again: make sure the number is four digits, "
+                message += "positive, and not all the numbers are the same: "
+                number = input(message)
+        except ValueError:
+            number = input("Try again: give an integer: ")
 
-while all_numbers[2] != 6174:
-    all_numbers = kaprekar_operation(all_numbers[2])
+    all_numbers = kaprekar_operation(number)
     print(all_numbers[0], "-", all_numbers[1], "=", all_numbers[2])
-print("finished! You have reached 6174, the four-digit Kaprekar Kernel")
+
+    while all_numbers[2] != 6174:
+        all_numbers = kaprekar_operation(all_numbers[2])
+        print(all_numbers[0], "-", all_numbers[1], "=", all_numbers[2])
+    print("finished! You have reached 6174, the four-digit Kaprekar Kernel")
+
+if __name__ == '__main__':
+    main()
